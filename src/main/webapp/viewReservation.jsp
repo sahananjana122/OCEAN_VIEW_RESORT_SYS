@@ -21,7 +21,7 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="nav-brand">🌊 Ocean View Resort</div>
+    <div class="nav-brand">Ocean View Resort</div>
     <div class="nav-links">
         <a href="dashboard.jsp" class="btn btn-outline">← Dashboard</a>
         <a href="logout" class="btn btn-outline">Logout</a>

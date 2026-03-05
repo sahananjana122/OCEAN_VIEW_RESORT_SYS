@@ -15,7 +15,7 @@
 <body class="login-page">
 <div class="login-container">
     <div class="login-card">
-        <div class="resort-logo">🌊</div>
+<%--        <div class="resort-logo">🌊</div>--%>
         <h2>Ocean View Resort</h2>
         <p class="subtitle">Reservation Management System</p>
 

@@ -21,7 +21,7 @@
 </head>
 <body>
 <nav class="navbar no-print">
-  <div class="nav-brand">🌊 Ocean View Resort</div>
+  <div class="nav-brand">Ocean View Resort</div>
   <div class="nav-links">
     <a href="dashboard.jsp" class="btn btn-outline">← Dashboard</a>
     <a href="logout" class="btn btn-outline">Logout</a>
@@ -49,7 +49,7 @@
     if (r != null) { %>
   <div class="bill-container" id="billPrint">
     <div class="bill-header">
-      <h1>🌊 Ocean View Resort</h1>
+      <h1>Ocean View Resort</h1>
       <p>Beachside Hotel, Galle, Sri Lanka</p>
       <p>Tel: +94 91 2234567 | info@oceanviewresort.com</p>
       <hr>
@@ -91,14 +91,14 @@
           <td><%= r.getCheckInDate() %></td>
           <td><%= r.getCheckOutDate() %></td>
           <td><%= r.getNumberOfNights() %></td>
-          <td>$<%= String.format("%.2f", r.getRoomType().getRatePerNight()) %></td>
-          <td>$<%= String.format("%.2f", r.getTotalBill()) %></td>
+          <td><%= String.format("%.2f", r.getRoomType().getRatePerNight()) %>LKR</td>
+          <td><%= String.format("%.2f", r.getTotalBill()) %>LKR</td>
         </tr>
         </tbody>
         <tfoot>
         <tr class="total-row">
           <td colspan="5"><strong>TOTAL AMOUNT</strong></td>
-          <td><strong>$<%= String.format("%.2f", r.getTotalBill()) %></strong></td>
+          <td><strong><%= String.format("%.2f", r.getTotalBill()) %>LKR</strong></td>
         </tr>
         </tfoot>
       </table>

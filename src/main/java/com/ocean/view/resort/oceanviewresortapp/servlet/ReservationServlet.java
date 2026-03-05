@@ -79,8 +79,25 @@ public class ReservationServlet extends HttpServlet {
             resp.sendRedirect("login.jsp");
             return;
         }
-        // Pre-load room types for the add form
-        loadRoomTypes(req);
-        req.getRequestDispatcher("/addReservation.jsp").forward(req, resp);
+
+        String action = req.getParameter("action");
+
+        if ("view".equals(action)) {
+            // Coming from "View" button with reservationNumber in URL
+            String resNum = req.getParameter("reservationNumber");
+            ReservationDAO dao = new ReservationDAO();
+            Reservation r = dao.getReservation(resNum);
+            if (r != null) {
+                req.setAttribute("reservation", r);
+            } else {
+                req.setAttribute("error", "Reservation not found.");
+            }
+            req.getRequestDispatcher("/viewReservation.jsp").forward(req, resp);
+
+        } else {
+            // Default: load add reservation form with room types
+            loadRoomTypes(req);
+            req.getRequestDispatcher("/addReservation.jsp").forward(req, resp);
+        }
     }
 }
