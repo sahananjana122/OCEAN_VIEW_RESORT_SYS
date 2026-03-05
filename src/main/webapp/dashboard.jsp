@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="nav-brand">🌊 Ocean View Resort</div>
+    <div class="nav-brand">Ocean View Resort</div>
     <div class="nav-links">
         <span>Welcome, <%= session.getAttribute("loggedUser") %></span>
         <a href="logout" class="btn btn-outline">Logout</a>
