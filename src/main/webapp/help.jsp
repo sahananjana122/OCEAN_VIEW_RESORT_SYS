@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: sajith_h
-  Date: 2/28/2026
-  Time: 1:56 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
   if (session.getAttribute("loggedUser") == null) {
